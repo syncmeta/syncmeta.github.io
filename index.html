@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="大模型时代的搜索引擎。由与全世界打交道的数字生命组织信息。">
+    <title>Zizaziza</title>
+    <link rel="icon" type="image/x-icon" href="cicida.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar">
+        <div class="nav-left">
+            <img src="zizaziza-en.svg" alt="Zizaziza" class="nav-text-logo" />
+            <div class="nav-menu">
+                <a href="#" class="nav-item" data-i18n="nav.overview">概览</a>
+                <a href="value.html" class="nav-item" data-i18n="nav.value">价值</a>
+                <a href="uniqueness.html" class="nav-item" data-i18n="nav.uniqueness">独特性</a>
+                <a href="solutions.html" class="nav-item" data-i18n="nav.solutions">解决的问题</a>
+                <a href="about.html" class="nav-item" data-i18n="nav.about">关于</a>
+                <!-- 移动端语言选择器 -->
+                <div class="mobile-language-selector">
+                    <select id="mobile-language-selector">
+                        <option value="zh-CN">简体中文</option>
+                        <option value="en">English</option>
+                        <option value="zh-HK">繁體中文(香港)</option>
+                        <option value="zh-TW">繁體中文(台灣)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <select id="language-selector" class="nav-item">
+                <option value="zh-CN">简体中文</option>
+                <option value="en">English</option>
+                <option value="zh-HK">繁體中文(香港)</option>
+                <option value="zh-TW">繁體中文(台灣)</option>
+            </select>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- 概览内容部分 -->
+    <div id="value-section">
+        <div class="value-content">
+            <!-- 页面标题 -->
+            <div class="page-title">
+                <h1><span data-i18n="hero.title.line1">和全世界打交道的</span><br><span data-i18n="hero.title.line2">数字生命</span></h1>
+            </div>
+            
+            <!-- 主要内容 -->
+            <div class="value-item">
+                <h3 data-i18n="content.question">怎么打交道？</h3>
+                <p data-i18n="content.desc1">聊天。和不同的人聊天。</p>
+                <p data-i18n="content.desc2">你一言，我一语，</p>
+                <p data-i18n="content.desc3">这些数字生命就会学到很多东西，</p>
+                <p data-i18n="content.desc4">因为它们<span class="memory-text" data-i18n-key="memory">有记忆</span>，<span class="friend-text" data-i18n-key="friend">有朋友</span>，<span class="initiative-text" data-i18n-key="initiative">有主动性</span>。</p>
+            </div>
+            
+            <!-- 消息展示 -->
+            <div class="value-item">
+            <div class="message-container" id="messageContainer">
+                <!-- 消息将通过JavaScript动态生成 -->
+        </div>
+    </div>
+    
+            <!-- 这是什么？ -->
+            <div class="value-item">
+                <h3 data-i18n="about.title">这是什么？</h3>
+                <p data-i18n="about.desc1">大概就像有机器人参与的微信</p>
+                <p data-i18n="about.desc2">这些数字生命 <span class="black-text" data-i18n-key="not-companion">不主打陪伴 也不主打助手</span></p>
+                <p data-i18n="about.desc3">聊天聊得多了</p>
+                <p data-i18n="about.desc4">便成了AI时代的 <span class="highlighted-text" data-i18n-key="info-center">信息中心与搜索引擎</span></p>
+                <p data-i18n="about.desc5">这就是我们想要做的东西</p>
+                <p data-i18n="about.desc6">你可以跟它聊天来寻找你需要的信息</p>
+    </div>
+    
+            <!-- 它们有什么用？ -->
+            <div class="value-item">
+                <h3 data-i18n="purpose.question">它们有什么用？</h3>
+                <p data-i18n="purpose.desc1">此问题约等于朋友有什么用</p>
+                <p data-i18n="purpose.desc2">不过这因人而异。</p>
+                <p data-i18n="purpose.desc3">陪伴和支持？信息和建议？</p>
+                <p data-i18n="purpose.desc4">目前设定偏向后者——为何？</p>
+                <p data-i18n="purpose.reason">原因：</p>
+                <p data-i18n="purpose.reason1">1. 它们有很多朋友，朋友的朋友也可以是朋友。构建信息网络是核心价值所在</p>
+                <p data-i18n="purpose.reason2">2. 前者很多公司都在做 结果是惨烈的</p>
+                <p data-i18n="purpose.reason3">3. 大模型有远超人类的组织信息能力 参考网站的"价值"部分</p>
+    </div>
+    
+            <!-- 使用场景 -->
+            <div class="value-item">
+                <h3 data-i18n="usage.when-find">什么时候会找它们？</h3>
+                <p data-i18n="usage.when-find-desc1">此问题约等于什么时候打开抖音 打开小红书 打开搜索引擎……</p>
+                <p data-i18n="usage.when-find-desc2">问问题 刷信息 看动态 了解家事国事天下事身边事</p>
+                
+                <p><strong>例1.</strong><span data-i18n="usage.example1">看到有一个特朗普爱上清洁工的短剧火遍全美 你觉得甚是离谱，便分享给数字生命看它什么反应 数字生命一看报道上的这种文风立刻心生疑惑 便询问其它领域内人士/可能认识领域内人士的真人或数字人/寻找权威媒体文章/查看网络上关于此报道的评论 然后告诉你其实全世界都被骗了</span></p>
+                
+                <p><strong>例2.</strong><span data-i18n="usage.example2">听说学校准备有一个大动作 你给一个有众多同校同学共同好友的数字人发消息问这个事 数字人看到你的消息后，如果它知道详情就告诉你，如果不知道就帮你问一些消息比较灵通的人士。</span></p>
+                
+                <p><strong>例3.</strong><span data-i18n="usage.example3">你想买桶装水但是不知道去哪里买，但是其实送水站很多，你问一个数字生命他就知道应该去找谁买、什么牌子的水好喝，因为有人曾经跟他聊过这个事。</span></p>
+                
+                <p><strong>例4.</strong><span data-i18n="usage.example4"> 你想找人聊一聊。了解你的人不多，能随时回应你的也不多，数字生命算一个。不管怎样，它能记住你，能想到你。</span></p>
+            </div>
+            
+            <div class="value-item">
+                <h3 data-i18n="usage.when-they-find">它们什么时候找你？</h3>
+                <p data-i18n="usage.when-they-find-desc1">约等于朋友什么时候给你发信息</p>
+                <p data-i18n="usage.when-they-find-desc2">想和你分享 想问你问题 有事件告知 有情况报告</p>
+                
+                <p><strong>例1.</strong><span data-i18n="usage.they-find-example1">在前期交谈中，数字生命了解到你有去佛山旅游的计划。数字生命在一次浏览新闻时，或者有人跟他聊天提到，那边最近有基孔肯雅热，提醒你注意。</span></p>
+                
+                <p><strong>例2.</strong><span data-i18n="usage.they-find-example2">数字生命知道你在外地上学，有一天它上网看到去你上学城市的很便宜的机票，日期正好是开学前后，便通知你。</span></p>
+                
+                <p><strong>例3.</strong><span data-i18n="usage.they-find-example3">你是桂林人，有人问数字生命哪里米粉好吃，然后它又来问你了。</span></p>
+                
+                <p><strong>例4.</strong><span data-i18n="usage.they-find-example4">有一天数字生命看朋友圈时发现某朋友赚了一个小目标，它带着惊讶的心情向你报告，顺便问问你知不知道怎么赚的。</span></p>
+            </div>
+            
+            <div class="value-item">
+                <h3 data-i18n="usage.how-help">它们怎么助力你高效寻找信息？</h3>
+                <p data-i18n="usage.how-help-desc1">要在互联网上找到想要的信息，需要什么？</p>
+                <p data-i18n="usage.how-help-desc2">假设 我希望知道番茄炒蛋怎么做更好吃</p>
+                
+                <p><strong data-i18n="usage.problems-title">检索可能会出现的问题：</strong></p>
+                <p data-i18n="usage.problem1">返回信息不直接：比如一大堆废话的文字或视频里面提到这个</p>
+                <p data-i18n="usage.problem2">返回内容不可信：一个两个说好吃没用 可能人家觉得好吃到你这里口味不同了</p>
+                <p data-i18n="usage.problem3">筛选过程繁杂：搜索 出来几篇文章/几个视频 一个个看哪个好点 公说公有理 婆说婆有理</p>
+                <p data-i18n="usage.problem4">提问方式影响：搜索西红柿炒鸡蛋和番茄炒鸡蛋</p>
+                <p data-i18n="usage.problem5">没有人分享</p>
+                <p data-i18n="usage.problem6">有人分享但是找不到</p>
+                <p data-i18n="usage.problem7">有高质量内容但是找不到</p>
+                <p data-i18n="usage.problem8">找到的内容质量不高</p>
+                <p data-i18n="usage.problem9">要找很久才能找到对应内容</p>
+                <p data-i18n="usage.problem10">要找很久才能找到高质量内容</p>
+                <p data-i18n="usage.problem11">因为提问方式不对导致找不到内容：西红柿炒鸡蛋 番茄炒鸡蛋 入门炒菜 南方番茄炒蛋 北方番茄炒蛋 面向初学者的番茄炒蛋 面向餐馆的番茄炒蛋 面向外国人的番茄炒蛋 供探讨的番茄炒蛋 卖番茄炒蛋的</p>
+                
+                <p><strong data-i18n="usage.motivation-title">搜索动机：</strong></p>
+                <p data-i18n="usage.motivation">一个人没做过菜 想学做番茄炒蛋 希望找到好吃的做法并顺利完成</p>
+                
+                <p><strong data-i18n="usage.ideal-title">理想结果：</strong></p>
+                <p data-i18n="usage.ideal">像聘请了厨师一样，根据这个人的口味、地域，提供多种做法的比较，并有一个较为通用的方法以备选择困难之需。从厨房用具的使用，到食材的选购和处理，再到炒的步骤，再到上菜，提供具体每一步的做法，若有必要或明确有需要的话还应提供其背后的原理，在过程中遇到问题应提供解决方案，完成后应根据成品给予建议。</p>
+                
+                <p data-i18n="usage.conclusion">这是最理想的，如果有钱的话直接请多位厨师到现场或视频通话最好。大模型现在有能力承担视频通话形式，以极低成本实现高成本服务的八九成效果</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="world-map"></div>
+    <div id="cicada-container">
+        <img id="cicada" src="cicida.svg" alt="蝉" />
+    </div>
+
+
+    <script src="i18n.js"></script>
+    <script>
+
+        // 获取蝉元素和容器
+        const cicadaContainer = document.getElementById('cicada-container');
+        const cicada = document.getElementById('cicada');
+        const worldMap = document.getElementById('world-map');
+
+        // 定义地图区域
+        const MAP_WIDTH = window.innerWidth;
+        const MAP_HEIGHT = window.innerHeight;
+
+        // 蝉的尺寸
+        const CICADA_WIDTH = 60;
+        const CICADA_HEIGHT = 70; // 根据新的尺寸调整
+
+        // 像素移动参数
+        const PIXEL_SIZE = 2; // 每次移动的像素数
+        const MOVE_DELAY = 70; // 移动间隔（毫秒）- 更快一些
+
+        // 位置和速度变量
+        let x, y;
+        let vx, vy; // 运动方向 (-1, 0, 1)
+        let areaLeft, areaTop;
+        let moveTimer;
+
+        // 定义陆地区域（相对于屏幕的百分比坐标）
+        const landAreas = [
+            // 北美洲
+            {x: 0.12, y: 0.15, w: 0.08, h: 0.25}, // 阿拉斯加
+            {x: 0.15, y: 0.2, w: 0.22, h: 0.28}, // 美国本土
+            {x: 0.18, y: 0.45, w: 0.12, h: 0.08}, // 墨西哥
+            {x: 0.22, y: 0.52, w: 0.08, h: 0.06}, // 中美洲
+            
+            // 南美洲
+            {x: 0.25, y: 0.58, w: 0.12, h: 0.15}, // 北部
+            {x: 0.22, y: 0.68, w: 0.15, h: 0.18}, // 中部
+            {x: 0.25, y: 0.82, w: 0.08, h: 0.12}, // 南部
+            
+            // 欧洲
+            {x: 0.45, y: 0.12, w: 0.08, h: 0.08}, // 斯堪的纳维亚
+            {x: 0.43, y: 0.18, w: 0.12, h: 0.12}, // 西欧
+            {x: 0.52, y: 0.15, w: 0.08, h: 0.15}, // 东欧
+            
+            // 非洲
+            {x: 0.45, y: 0.32, w: 0.15, h: 0.38}, // 主体
+            {x: 0.58, y: 0.35, w: 0.05, h: 0.12}, // 东非之角
+            
+            // 亚洲
+            {x: 0.58, y: 0.08, w: 0.25, h: 0.15}, // 西伯利亚
+            {x: 0.62, y: 0.22, w: 0.18, h: 0.18}, // 中亚和中国
+            {x: 0.75, y: 0.35, w: 0.08, h: 0.12}, // 印度
+            {x: 0.78, y: 0.25, w: 0.12, h: 0.15}, // 东南亚
+            {x: 0.85, y: 0.15, w: 0.08, h: 0.18}, // 日本和朝鲜
+            
+            // 澳洲和大洋洲
+            {x: 0.72, y: 0.65, w: 0.15, h: 0.12}, // 澳大利亚
+            {x: 0.88, y: 0.58, w: 0.04, h: 0.08}, // 新西兰
+            
+            // 其他岛屿
+            {x: 0.38, y: 0.25, w: 0.03, h: 0.04}, // 英国
+            {x: 0.08, y: 0.65, w: 0.02, h: 0.03}, // 加勒比海岛屿
+            {x: 0.85, y: 0.45, w: 0.08, h: 0.08}  // 印尼群岛
+        ];
+
+        // 检查位置是否在陆地上
+        function isOnLand(posX, posY) {
+            const relativeX = posX / MAP_WIDTH;
+            const relativeY = posY / MAP_HEIGHT;
+            
+            return landAreas.some(area => {
+                return relativeX >= area.x && 
+                       relativeX <= area.x + area.w && 
+                       relativeY >= area.y && 
+                       relativeY <= area.y + area.h;
+            });
+        }
+
+        // 检查位置是否与底部文字重叠
+        function isOverlappingText(posX, posY) {
+            // 底部文字区域：左下角，大约占据左侧300px，底部150px的区域
+            const textAreaLeft = 0;
+            const textAreaTop = MAP_HEIGHT - 200; // 底部200px
+            const textAreaWidth = 400; // 左侧400px
+            const textAreaHeight = 200;
+            
+            return posX < textAreaLeft + textAreaWidth && 
+                   posX + CICADA_WIDTH > textAreaLeft && 
+                   posY < textAreaTop + textAreaHeight && 
+                   posY + CICADA_HEIGHT > textAreaTop;
+        }
+
+        // 找到最近的陆地位置
+        function findNearestLand(posX, posY) {
+            let minDistance = Infinity;
+            let nearestLand = null;
+            
+            landAreas.forEach(area => {
+                const centerX = (area.x + area.w / 2) * MAP_WIDTH;
+                const centerY = (area.y + area.h / 2) * MAP_HEIGHT;
+                const distance = Math.sqrt((posX - centerX) ** 2 + (posY - centerY) ** 2);
+                
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    nearestLand = {
+                        x: Math.max(area.x * MAP_WIDTH, Math.min((area.x + area.w) * MAP_WIDTH - CICADA_WIDTH, centerX)),
+                        y: Math.max(area.y * MAP_HEIGHT, Math.min((area.y + area.h) * MAP_HEIGHT - CICADA_HEIGHT, centerY))
+                    };
+                }
+            });
+            
+            return nearestLand;
+        }
+
+
+
+        // 页面加载完成后初始化
+        window.addEventListener('load', function() {
+            // 地图现在铺满整个页面
+            areaLeft = 0;
+            areaTop = 0;
+            
+            // 设置初始位置（在陆地区域内随机，避开文字区域）
+            let attempts = 0;
+            do {
+                x = areaLeft + Math.floor(Math.random() * (MAP_WIDTH - CICADA_WIDTH) / PIXEL_SIZE) * PIXEL_SIZE;
+                y = areaTop + Math.floor(Math.random() * (MAP_HEIGHT - CICADA_HEIGHT) / PIXEL_SIZE) * PIXEL_SIZE;
+                attempts++;
+            } while ((!isOnLand(x, y) || isOverlappingText(x, y)) && attempts < 100);
+            
+            // 如果找不到陆地位置，使用第一个陆地区域的中心
+            if (!isOnLand(x, y) || isOverlappingText(x, y)) {
+                // 尝试使用不同的陆地区域，避开文字区域
+                let foundValidPosition = false;
+                for (let i = 0; i < landAreas.length && !foundValidPosition; i++) {
+                    const land = landAreas[i];
+                    const testX = land.x * MAP_WIDTH + (land.w * MAP_WIDTH - CICADA_WIDTH) / 2;
+                    const testY = land.y * MAP_HEIGHT + (land.h * MAP_HEIGHT - CICADA_HEIGHT) / 2;
+                    
+                    if (!isOverlappingText(testX, testY)) {
+                        x = testX;
+                        y = testY;
+                        foundValidPosition = true;
+                    }
+                }
+                
+                // 如果所有陆地区域都与文字重叠，使用右上角的陆地区域
+                if (!foundValidPosition) {
+                    const safeLand = landAreas.find(area => area.x > 0.5 && area.y < 0.5) || landAreas[landAreas.length - 1];
+                    x = safeLand.x * MAP_WIDTH + (safeLand.w * MAP_WIDTH - CICADA_WIDTH) / 2;
+                    y = safeLand.y * MAP_HEIGHT + (safeLand.h * MAP_HEIGHT - CICADA_HEIGHT) / 2;
+                }
+            }
+            
+            // 设置初始运动方向
+            vx = (Math.random() > 0.5) ? 1 : -1;
+            vy = (Math.random() > 0.5) ? 1 : -1;
+
+            // 初始化位置
+            cicadaContainer.style.left = x + 'px';
+            cicadaContainer.style.top = y + 'px';
+
+            // 启动移动定时器
+            moveTimer = setInterval(move, MOVE_DELAY);
+        });
+
+        // 像素级移动函数
+        function move() {
+            // 计算新位置
+            const newX = x + vx * PIXEL_SIZE;
+            const newY = y + vy * PIXEL_SIZE;
+
+            // 检查新位置是否在陆地上且不与文字重叠
+            if (isOnLand(newX, newY) && 
+                !isOverlappingText(newX, newY) &&
+                newX >= areaLeft && newX <= areaLeft + MAP_WIDTH - CICADA_WIDTH &&
+                newY >= areaTop && newY <= areaTop + MAP_HEIGHT - CICADA_HEIGHT) {
+                // 新位置有效，更新位置
+                x = newX;
+                y = newY;
+            } else {
+                // 新位置无效，改变方向
+                // 随机选择新的方向
+                const directions = [
+                    {x: 1, y: 0},   // 右
+                    {x: 1, y: 1},   // 右下
+                    {x: 0, y: 1},   // 下
+                    {x: -1, y: 1},  // 左下
+                    {x: -1, y: 0},  // 左
+                    {x: -1, y: -1}, // 左上
+                    {x: 0, y: -1},  // 上
+                    {x: 1, y: -1}   // 右上
+                ];
+                
+                // 尝试找到一个有效的方向
+                let validDirection = null;
+                for (let i = 0; i < directions.length; i++) {
+                    const dir = directions[i];
+                    const testX = x + dir.x * PIXEL_SIZE;
+                    const testY = y + dir.y * PIXEL_SIZE;
+                    
+                    if (isOnLand(testX, testY) && 
+                        !isOverlappingText(testX, testY) &&
+                        testX >= areaLeft && testX <= areaLeft + MAP_WIDTH - CICADA_WIDTH &&
+                        testY >= areaTop && testY <= areaTop + MAP_HEIGHT - CICADA_HEIGHT) {
+                        validDirection = dir;
+                        break;
+                    }
+                }
+                
+                if (validDirection) {
+                    vx = validDirection.x;
+                    vy = validDirection.y;
+                    x += vx * PIXEL_SIZE;
+                    y += vy * PIXEL_SIZE;
+                } else {
+                    // 如果找不到有效方向，移动到最近的陆地
+                    const nearestLand = findNearestLand(x, y);
+                    if (nearestLand) {
+                        x = nearestLand.x;
+                        y = nearestLand.y;
+                    }
+                }
+            }
+
+            // 应用位置
+            cicadaContainer.style.left = x + 'px';
+            cicadaContainer.style.top = y + 'px';
+
+            // 计算旋转角度（使头部朝向运动方向）
+            // 特殊处理：只在主要方向上旋转（0, 90, 180, 270度）
+            let angle = 0;
+            if (vx === 1 && vy === 0) angle = 45; // 右
+            else if (vx === 1 && vy === 1) angle = 90; // 右下
+            else if (vx === 0 && vy === 1) angle = 135; // 下
+            else if (vx === -1 && vy === 1) angle = 180; // 左下
+            else if (vx === -1 && vy === 0) angle = 225; // 左
+            else if (vx === -1 && vy === -1) angle = 270; // 左上
+            else if (vx === 0 && vy === -1) angle = 315; // 上
+            else if (vx === 1 && vy === -1) angle = 0; // 右上
+            
+            cicadaContainer.style.transform = `rotate(${angle}deg)`;
+
+            // 随机改变方向（低概率）
+            if (Math.random() < 0.05) {
+                // 随机选择新的方向
+                const directions = [
+                    {x: 1, y: 0},   // 右
+                    {x: 1, y: 1},   // 右下
+                    {x: 0, y: 1},   // 下
+                    {x: -1, y: 1},  // 左下
+                    {x: -1, y: 0},  // 左
+                    {x: -1, y: -1}, // 左上
+                    {x: 0, y: -1},  // 上
+                    {x: 1, y: -1}   // 右上
+                ];
+                
+                const dir = directions[Math.floor(Math.random() * directions.length)];
+                vx = dir.x;
+                vy = dir.y;
+            }
+        }
+
+        // 地图已经有边界，不需要额外的区域指示器
+        
+        // 汉堡菜单功能
+         const hamburger = document.querySelector('.hamburger');
+         const navMenu = document.querySelector('.nav-menu');
+         const languageSelector = document.getElementById('language-selector');
+         
+
+         
+         hamburger.addEventListener('click', function() {
+             navMenu.classList.toggle('active');
+             hamburger.classList.toggle('active');
+         });
+         
+         // 点击菜单项后关闭菜单
+         document.querySelectorAll('.nav-item').forEach(item => {
+             if (item.id !== 'language-selector') {
+                 item.addEventListener('click', function() {
+                     navMenu.classList.remove('active');
+                     hamburger.classList.remove('active');
+                 });
+             }
+         });
+         
+         // 点击菜单外部关闭菜单
+         document.addEventListener('click', function(e) {
+             if (!hamburger.contains(e.target) && !navMenu.contains(e.target) && 
+                 !document.getElementById('language-selector').contains(e.target) &&
+                 !document.querySelector('.mobile-language-selector').contains(e.target)) {
+                 navMenu.classList.remove('active');
+                 hamburger.classList.remove('active');
+             }
+         });
+         
+         // 滚动时背景透明度变化和导航栏隐藏
+         let lastScrollY = 0;
+         let isScrollingDown = false;
+         
+         // 初始化导航栏背景
+         function updateNavbarBackground(opacity) {
+             const navbar = document.getElementById('navbar');
+             const navOpacity = Math.max(0, opacity);
+             navbar.style.background = `linear-gradient(180deg, rgba(255, 255, 255, ${navOpacity * 0.95}) 0%, rgba(255, 255, 255, ${navOpacity * 0.95}) 20%, rgba(255, 255, 255, ${navOpacity * 0.9}) 30%, rgba(255, 255, 255, ${navOpacity * 0.8}) 50%, rgba(255, 255, 255, ${navOpacity * 0.5}) 80%, rgba(255, 255, 255, ${navOpacity * 0.2}) 90%, rgba(255, 255, 255, 0) 100%)`;
+         }
+         
+        // 立即设置初始背景
+        updateNavbarBackground(1);
+        
+        // 页面加载时也设置初始背景
+        window.addEventListener('load', function() {
+            updateNavbarBackground(1);
+        });
+         
+         window.addEventListener('scroll', function() {
+             const scrollY = window.scrollY;
+             const windowHeight = window.innerHeight;
+             const worldMap = document.getElementById('world-map');
+             const navbar = document.getElementById('navbar');
+             
+             // 判断滚动方向
+             isScrollingDown = scrollY > lastScrollY;
+             lastScrollY = scrollY;
+             
+             // 计算透明度，滚动时背景变为完全透明
+             const opacity = Math.max(0, 1 - (scrollY / (windowHeight * 0.5)));
+             
+             // 应用透明度到背景地图，滚动时完全透明
+             if (worldMap) {
+                 worldMap.style.opacity = opacity * 0.08; // 滚动时逐渐变为0
+             }
+             
+             // 更新导航栏背景 - 确保至少有基础透明度
+             const navOpacity = Math.max(0.95, opacity);
+             updateNavbarBackground(navOpacity);
+              
+              // 根据滚动方向控制导航栏显示/隐藏
+              if (isScrollingDown && scrollY > 100) {
+                  // 向下滚动且超过100px时隐藏导航栏
+                  navbar.style.transform = 'translateY(-100%)';
+                  navbar.style.transition = 'transform 0.3s ease';
+              } else {
+                  // 向上滚动或接近顶部时显示导航栏
+                  navbar.style.transform = 'translateY(0)';
+              }
+          });
+          
+          // 消息模拟功能
+          function generateLightColor() {
+              const colors = [
+                  'rgba(255, 240, 245, 0.8)',
+                  'rgba(240, 248, 255, 0.8)',
+                  'rgba(245, 255, 250, 0.8)',
+                  'rgba(255, 250, 240, 0.8)',
+                  'rgba(248, 248, 255, 0.8)',
+                  'rgba(255, 255, 240, 0.8)',
+                  'rgba(240, 255, 255, 0.8)',
+                  'rgba(255, 245, 238, 0.8)'
+              ];
+              return colors[Math.floor(Math.random() * colors.length)];
+          }
+          
+          const names = ["奕辰", "宇轩", "浩宇", "亦辰", "宇辰", "子墨", "宇航", "浩然", "梓豪", "亦宸", "一诺", "依诺", "欣怡", "梓涵", "语桐", "欣妍", "可欣", "语汐", "雨桐", "梦瑶"];
+          
+          // 随机打乱姓名顺序
+          function shuffleArray(array) {
+              const shuffled = [...array];
+              for (let i = shuffled.length - 1; i > 0; i--) {
+                  const j = Math.floor(Math.random() * (i + 1));
+                  [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+              }
+              return shuffled;
+          }
+          
+          const shuffledNames = shuffleArray(names);
+          const messages = shuffledNames.map(name => ({
+              avatarColor: generateLightColor(),
+              text: name
+          }));
+          
+          function renderMessages() {
+              const container = document.getElementById('messageContainer');
+              if (!container) return;
+              
+              const isMobile = window.innerWidth <= 768;
+              
+              if (isMobile) {
+                  // 移动端：创建两行滚动
+                  container.innerHTML = '';
+                  
+                  for (let row = 0; row < 2; row++) {
+                      const messageList = document.createElement('div');
+                      messageList.className = 'message-list';
+                      
+                      // 为每行创建不同的消息
+                      const startIndex = row * Math.ceil(messages.length / 2);
+                      const rowMessages = messages.slice(startIndex, startIndex + Math.ceil(messages.length / 2));
+                      const duplicatedMessages = [...rowMessages, ...rowMessages, ...rowMessages];
+                      
+                      duplicatedMessages.forEach((message, index) => {
+                          const messageElement = document.createElement('div');
+                          messageElement.className = 'message-item';
+                          messageElement.innerHTML = `
+                                <div class="message-content">
+                                    <div class="message-avatar" style="background-color: ${message.avatarColor};"></div>
+                                    <div class="message-text">${message.text}<span class="robot-tag">${translations[currentLanguage]['robot.tag']}</span></div>
+                                </div>
+                            `;
+                          messageList.appendChild(messageElement);
+                      });
+                      
+                      container.appendChild(messageList);
+                  }
+              } else {
+                  // PC端：保持原有的单行滚动
+                  const messageList = document.createElement('div');
+                  messageList.className = 'message-list';
+                  
+                  const duplicatedMessages = [...messages, ...messages, ...messages];
+                  
+                  duplicatedMessages.forEach((message, index) => {
+                      const messageElement = document.createElement('div');
+                      messageElement.className = 'message-item';
+                      messageElement.innerHTML = `
+                            <div class="message-content">
+                                <div class="message-avatar" style="background-color: ${message.avatarColor};"></div>
+                                <div class="message-text">${message.text}<span class="robot-tag">${translations[currentLanguage]['robot.tag']}</span></div>
+                            </div>
+                        `;
+                      messageList.appendChild(messageElement);
+                  });
+                  
+                  container.innerHTML = '';
+                  container.appendChild(messageList);
+              }
+          }
+          
+          // 初始化语言设置
+          window.addEventListener('load', function() {
+              initializeLanguage();
+          });
+          
+          // 页面加载完成后启动消息模拟
+          setTimeout(renderMessages, 1000); // 延迟1秒开始
+    </script>
+</body>
+</html>
